@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        
+        <button type="button" onclick="attemptLogin()">Login</button>
+    </form>
+
+    <p id="loginResult"></p>
+
+    <script>
+        function attemptLogin() {
+            // Retrieve the values submitted in the login form
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace this with your actual authentication logic
+            var validUsername = "Amir";
+            var validPassword = "Capo";
+
+            // Check if the submitted credentials are valid
+            if (username === validUsername && password === validPassword) {
+                // Authentication successful
+                document.getElementById("loginResult").innerText = "Login Successful!";
+            } else {
+                // Authentication failed
+                document.getElementById("loginResult").innerText = "Wrong Username or Password";
+            }
+        }
+    </script>
+</body>
+</html>
